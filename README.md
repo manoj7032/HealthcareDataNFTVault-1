@@ -229,9 +229,9 @@ npm start
    4. Click **Grant Access**.
 
 10. **View Healthcare Data**:
-   1. Switch to the Doctor View tab in the application.
-   2. Enter the Token ID and the private key of the user to decrypt the data.
-   3. Click View Healthcare Data to view the details securely.
+    - Switch to the Doctor View tab in the application.
+    - Enter the Token ID and the private key of the user to decrypt the data.
+    - Click View Healthcare Data to view the details securely.
 
 11. **Set Up Holesky in Metamask**:
    - Open MetaMask
