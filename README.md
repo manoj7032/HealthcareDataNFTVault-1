@@ -1,146 +1,111 @@
 # Healthcare Data NFT Vault
 
-## Team Members:
-| Name                          | CWID       | Email                             |
-|-------------------------------|------------|-----------------------------------|
-| Venkata Abhinav Karthik Pulikonda | 885210294 | abhinavpulikonda@csu.fullerton.edu |
-| Manoj Gangavarapu             | 885164319  | manojgangavarapu@csu.fullerton.edu |
-| Sai Satya Jagannadh Doddipatla| 885177436  | saijagannadh@csu.fullerton.edu     |
-| Rakesh Puppala                | 885175919  | rakeshpuppala2591@csu.fullerton.edu |
-
----
-
-## Project Description
-The **Healthcare Data NFT Vault** leverages blockchain technology to securely tokenize sensitive healthcare data. The project enables users to encrypt and transform their healthcare data into Non-Fungible Tokens (NFTs), store the encrypted data on the InterPlanetary File System (IPFS), and manage access permissions using Ethereum smart contracts.
-
-### Key Features:
-- **NFT Minting**: Transform healthcare data into secure, encrypted NFTs.
-- **Secure Storage**: Store encrypted data on IPFS, linking metadata to the IPFS hash.
-- **Access Control**: Allow users to manage access by granting or revoking permissions for specific data.
-- **Data Viewing**: Enable authorized users to decrypt and view healthcare data securely.
-
-This project addresses the critical need for secure healthcare data sharing while ensuring privacy and compliance with regulations such as HIPAA.
-
----
-
 ## Project Overview
-### Accomplishments:
 
-1. **Smart Contract Development**:
-   - Created core functionalities in Solidity for NFT minting, access granting, and revocation.
-   - Integrated validations for token ownership and unique token IDs to enhance security.
+The Healthcare Data NFT Vault is a blockchain-based application that securely tokenizes and manages sensitive healthcare data using Non-Fungible Tokens (NFTs), IPFS storage, and Ethereum smart contracts.
 
-2. **Frontend Development**:
-   - Built a React-based interface for seamless user interaction.
-   - Improved UI/UX with a simple, intuitive design.
+## 🌟 Key Features
 
-3. **IPFS Integration**:
-   - Integrated Pinata for storing encrypted healthcare data on IPFS.
-   - Implemented encryption and decryption using CryptoJS to ensure data privacy.
+- **Secure Data Tokenization**: Encrypt and transform healthcare data into NFTs
+- **IPFS Storage**: Securely store encrypted data on the InterPlanetary File System
+- **Access Control**: Grant and revoke data access with granular permissions
+- **Compliance**: Meets healthcare privacy regulations (HIPAA, GDPR, HITECH Act)
+- **Blockchain Integration**: Utilizes Ethereum smart contracts for transparency
 
-4. **Access Control**:
-   - Developed robust mechanisms for access control, enabling users to grant/revoke access to specific tokens.
-   - Ensured only token owners can manage permissions through additional validations.
+## 👥 Team Members
 
-5. **Data Viewing**:
-   - Implemented secure processes for authorized users to decrypt and view data.
-   - Added detailed logging and error handling for a smooth user experience.
+- Venkata Abhinav Karthik Pulikonda
+- Manoj Gangavarapu
+- Sai Satya Jagannadh Doddipatla
+- Rakesh Puppala
 
-6. **Testing and Validation**:
-   - Conducted comprehensive testing for all features, including minting, access granting, and decryption.
-   - Fixed bugs related to user validation and decryption processes.
+## 🚀 Technologies Used
 
-7. **Holesky Testnet Integration**:
-   - Utilized the Holesky Testnet for testing in a blockchain environment, providing a better alternative to localhost.
+- **Blockchain**: Ethereum, Solidity
+- **Frontend**: React.js
+- **Storage**: IPFS (Pinata)
+- **Encryption**: CryptoJS
+- **Wallet Integration**: MetaMask
 
----
+## 📦 Prerequisites
 
-## Features
+- Node.js and npm
+- Ganache or Ethereum-compatible blockchain
+- MetaMask browser extension
+- Pinata API credentials
 
-1. **Patient Data Minting**:
-   - Tokenize patient data fields such as Token ID, Data Type, Images, Date of Record Entry, and Healthcare Data Description.
+## 🔧 Installation
 
-   *(Insert photo here)*
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-repo/healthcare-data-nft-vault.git
+   cd healthcare-data-nft-vault
+   ```
 
-2. **Access Control**:
-   - Enable doctors to access patient data using randomized decryption keys (Token ID, Doctor Account Address, Decryption Key).
-
-   *(Insert photo here)*
-
-3. **Data Viewing**:
-   - Allow doctors to securely view patient data (Token ID and Doctor Account Address).
-
-   *(Insert photo here)*
-
-4. **Other Features**:
-   - Enhanced encryption and user authentication mechanisms.
-
----
-
-## Setup and Run the Project
-
-### Steps:
-
-1. **Set Up Ganache Workspace**:
-   - Open Ganache and create a new workspace.
-   - Add the `truffle-config.js` file from the project.
-   - Start the workspace.
-   *(Insert photo here)*
-
-2. **Install Dependencies**:
+2. Install dependencies
    ```bash
    npm install
    npm install -g truffle
    ```
 
-3. **Note Down Contract Address**:
-   - Open Ganache, navigate to the project, find the contract address, and update it in `client/src/app.js`.
+3. Set up Ganache and configure MetaMask
 
-4. **Configure Pinata**:
-   - Update API credentials:
-     ```javascript
-     const PINATA_API_KEY = "XXXXXXXX";
-     const PINATA_API_SECRET = "XXXXXXXXXXXXXXXXXXXXXX";
-     ```
+4. Deploy smart contracts
+   ```bash
+   cd contracts
+   truffle migrate --reset
+   ```
 
-5. **Run the Frontend**:
+5. Configure Pinata with your API credentials
+
+6. Start the frontend
    ```bash
    cd client
    npm start
    ```
 
-6. **MetaMask Setup**:
-   - Create a local network with the following settings:
-     - **Network Name**: Localhost 8545
-     - **RPC URL**: http://127.0.0.1:7545
-     - **Chain ID**: 1337
-     - **Currency Symbol**: ETH
-     - **Block Explorer URL**: Leave blank.
+## 🔐 Key Workflow
 
-   - Import accounts using private keys from Ganache:
-     - Copy private keys from Ganache (Accounts > Address > Private Key).
-     - Import them into MetaMask to create accounts for the patient and doctor.
+1. **Patient Data Entry**: Mint NFTs with encrypted healthcare data
+2. **Access Control**: Grant/revoke access to specific tokens
+3. **Secure Viewing**: Authorized users can decrypt and view data
 
-7. **Mint Patient Data and Grant Access**:
-   - Use the imported accounts in MetaMask for minting and access control.
+## 📋 Main Tabs
 
----
+- Patient Data Entry
+- Access Control
+- Doctor View
+- Records Overview
+- Privacy Laws Information
 
-## Issues, Challenges, and Questions
+## 🧪 Testnet Support
 
-- **Encryption and Decryption**:
-  - Debugged issues with malformed decryption keys by improving validation and logging mechanisms.
+- Holesky Testnet integration
+- Local development with Ganache
 
-- **Smart Contract Integration**:
-  - Resolved challenges in granting access by adding proper validations in both smart contracts and the frontend.
+## 🛡️ Security Features
 
-- **UI Enhancements**:
-  - Iterated designs to create a more user-friendly and responsive interface.
+- Encryption of sensitive data
+- Blockchain-based access management
+- Compliance with healthcare privacy regulations
 
-- **Blockchain Gas Fees**:
-  - Considered potential deployment issues related to high gas fees.
+## 🤝 Contributing
 
----
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Live Demo
-*(Insert live demo video link here)*
+## 📄 License
+
+[Specify your license here]
+
+## 📞 Contact
+
+- Venkata Abhinav Karthik Pulikonda - abhinavpulikonda@csu.fullerton.edu
+- Manoj Gangavarapu - manojgangavarapu@csu.fullerton.edu
+- Sai Satya Jagannadh Doddipatla - saijagannadh@csu.fullerton.edu
+- Rakesh Puppala - rakeshpuppala2591@csu.fullerton.edu
+
+**Note**: Replace placeholder repository URLs and add an appropriate license before publishing.
