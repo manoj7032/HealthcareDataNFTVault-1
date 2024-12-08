@@ -205,19 +205,43 @@ npm start
      - **Chain ID**: 1337
      - **Currency Symbol**: ETH
    - Import accounts using private keys from Ganache:
-     - Go to Ganache > Accounts > Private Key.
-     - Use these keys to import accounts in MetaMask.
+   - Go to Ganache > Accounts > Private Key.
+   - Use these keys to import accounts in MetaMask.
 
 8. **Mint Patient Data and Grant Access**:
-   - Use the Patient Data Entry tab in the frontend to mint NFTs by filling out all fields.
+   1. Use the Patient Data Entry tab in the frontend to mint NFTs by filling out all fields.
+   2. Go to the Patient Data Entry tab in the application.
+   3. Fill in the required fields:
+      - **Name**
+      - **Age**
+      - **Token ID**
+      - **Data Type** (e.g., Bloodwork, X-Ray, etc.)
+      - **Date**
+      - **Provider Name**
+      - **Healthcare Data Description**
+   4. Upload an image for the healthcare data.
+   5. Click **Mint NFT** to tokenize the data.
 
-9. **Set Up Holesky in Metamask**:
-   - Open MetaMask and add the Holesky Testnet:
+9. **Grant Access**:
+   1. Switch to the Access Control tab in the application.
+   2. Enter the Token ID and the address of the user (doctor) you want to grant access to.
+   3. Enter the decryption key for the data.
+   4. Click **Grant Access**.
+
+10. **View Healthcare Data**:
+   1. Switch to the Doctor View tab in the application.
+   2. Enter the Token ID and the private key of the user to decrypt the data.
+   3. Click **View Healthcare Data** to view the details securely.
+
+11. **Set Up Holesky in Metamask**:
+   - Open MetaMask
+   - Add the Holesky Testnet:
      - **Network Name**: Holesky Testnet
      - **New RPC URL**: `https://holesky.infura.io/v3/YOUR_INFURA_PROJECT_ID`
      - **Chain ID**: 17000
      - **Currency Symbol**: ETH
      - **Block Explorer URL**: `https://holesky.etherscan.io/`
+   - Save the Network Configuration
 
 ---
 
